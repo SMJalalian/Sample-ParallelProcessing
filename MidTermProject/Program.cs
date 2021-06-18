@@ -46,10 +46,16 @@ namespace MidTermProject
                         case 1:
                             #region Matrix Multiplication
 
-                            Console.WriteLine("Matrix Multiplication, Plase wait for result ... ");
+                            Console.Write("Please enter size of Matrix-A rows: ");
+                            int rowA = Convert.ToInt32(Console.ReadLine());
+                            Console.Write("Please enter size of Matrix-A cols: ");
+                            int colA_rowB = Convert.ToInt32(Console.ReadLine());
+                            Console.Write("Please enter size of Matrix-B Cols: ");
+                            int colB = Convert.ToInt32(Console.ReadLine());
 
-                            double[,] matrixA = Packages.Tools.GenerateRandomMatrix(400, 2000);
-                            double[,] matrixB = Packages.Tools.GenerateRandomMatrix(2000, 500);
+                            Console.WriteLine("Matrix Multiplication, Plase wait for result ... ");
+                            double[,] matrixA = Packages.Tools.GenerateRandomMatrix(rowA, colA_rowB);
+                            double[,] matrixB = Packages.Tools.GenerateRandomMatrix(colA_rowB, colB);
 
                             Console.WriteLine("\nSequential Process is Starting ... "); sw.Start();
                             MatrixMultiplication.SequentialMultiplication(matrixA, matrixB);
