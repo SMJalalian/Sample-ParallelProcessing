@@ -136,11 +136,9 @@ namespace MidTermProject
                     Console.Write("Please enter ( n/N ) to quit .... ");
                     var key = Console.ReadKey();
                     if (key.KeyChar.ToString().ToLower() == "n")
-                        break;
+                        Environment.Exit(0);
                     else
-                    {
                         Console.Clear();
-                    }
                 }
                 catch (Exception)
                 {
