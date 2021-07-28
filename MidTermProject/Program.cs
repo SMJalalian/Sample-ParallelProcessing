@@ -57,7 +57,8 @@ namespace MidTermProject
                             double[,] matrixA = Packages.Tools.GenerateRandomMatrix(rowA, colA_rowB);
                             double[,] matrixB = Packages.Tools.GenerateRandomMatrix(colA_rowB, colB);
 
-                            Console.WriteLine("\nSequential Process is Starting ... "); sw.Start();
+                            Console.WriteLine("\nSequential Process is Starting ... "); 
+                            sw.Start();
                             MatrixMultiplication.SequentialMultiplication(matrixA, matrixB);
                             sw.Stop();
                             Console.WriteLine("Time elapsed: " + sw.Elapsed);
